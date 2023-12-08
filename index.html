@@ -5,12 +5,22 @@
     <title>google</title>
     <link rel="shortcut icon" type="image/x-icon" href="./google_standard_color.ico">
     <style>
-        #header{
+        html, body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .header{
             display: flex;
             align-items: center;
             height: 60px;
         }
-        #header_inside{
+        .header_inside{
             display: flex;
             justify-content: flex-end;
             flex-grow: 1;
@@ -31,34 +41,72 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            height: 300px;
+            max-height: 290px;
             background-color: aquamarine;
         }
         .logoimg{
          width: 272;
          margin-top: auto;
         }
+        .white_space{
+            flex-grow: 1;
+            font-size: small;
+            margin-bottom: 32px;
+            background-color: antiquewhite;
+        }
+        .ad{
+            text-align: center;
+            font-size: small;
+            margin-bottom: 32px;
+            background-color: chartreuse;
+        }
+        .ad img{
+            margin-right: 5px;
+            vertical-align: middle;
+        }
+        .Gemini{
+            font-family: arial,sans-serif;
+            text-align: center;
+            display: inline-block;
+        }
+        .Gemini a{
+            color: #1a0dab;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        .Gemini a:visited{
+            color: #681da8;
+        }
     </style>
 </head>
 <body>
-    <div id="header">
-        <a class="G inform">Google 정보</a>
-        <a class="G st">스토어</a>
-        <div id="header_inside">
-            <a class="g Gm">Gmail</a>
-            <a class="g im">이미지</a>
-            <a class="g mu">점점점</a>
-            <a class="g box">로그인</a>
+    <div class="container">
+        <div class="header">
+            <a class="G inform">Google 정보</a>
+            <a class="G st">스토어</a>
+            <div class="header_inside">
+                <a class="g Gm">Gmail</a>
+                <a class="g im">이미지</a>
+                <a class="g mu">점점점</a>
+                <a class="g box">로그인</a>
+            </div>
         </div>
+        <div class="logo">
+            <img class="logoimg" alt="google" src="googlelogo_color.png">  
+        </div>
+        <main class="serch">검색</main>
+        <section class="white_space">
+            <div class="ad">
+                <img alt="" height="32" width="32" src="https://www.google.com/images/hpp/gemini-icon-gradient-rgb-42px.png">
+                <div class="Gemini"><a href="https://korea.googleblog.com/2023/12/blog-post_652.html?utm_source=HPP&utm_medium=Owned&utm_campaign=Gemini_Blog">Google의 가장 유용하고 범용적인 AI 모델 Gemini에 대해 더 알아보세요</a></div>
+            </div>
+        </section>
+        <footer>
+            <div class="country">국가</div>
+            <div class="outside">설정</div>
+        </footer>
     </div>
-    <div class="logo">
-        <img class="logoimg" alt="google" src="googlelogo_color.png">  
-    </div>
-    <main id="serch">검색</main>
-    <section id="white_space">빈공간</section>
-    <footer>
-        <div class="country">국가</div>
-        <div class="outside">설정</div>
-    </footer>
 </body>
 </html>
